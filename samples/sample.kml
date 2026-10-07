@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample survey</name>
+    <Folder>
+      <name>Plots</name>
+      <Placemark>
+        <name>Plot A</name>
+        <description>Square plot, roughly 1.1 km x 1.1 km</description>
+        <ExtendedData>
+          <Data name="owner"><value>Ravi</value></Data>
+        </ExtendedData>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                77.0,17.0,0 77.01,17.0,0 77.01,17.01,0 77.0,17.01,0 77.0,17.0,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Plot B (with a hole)</name>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>77.02,17.0 77.04,17.0 77.04,17.02 77.02,17.02 77.02,17.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>77.025,17.005 77.035,17.005 77.035,17.015 77.025,17.015 77.025,17.005</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+    <Placemark>
+      <name>Road</name>
+      <LineString>
+        <coordinates>77.0,17.0 77.01,17.01 77.02,17.02</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Well</name>
+      <Point><coordinates>77.005,17.005,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Just a label (no geometry)</name>
+    </Placemark>
+  </Document>
+</kml>
